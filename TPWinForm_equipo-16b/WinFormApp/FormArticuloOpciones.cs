@@ -26,5 +26,10 @@ namespace WinFormApp
         {
 
         }
+
+        private void panelOpcionesArticulos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
