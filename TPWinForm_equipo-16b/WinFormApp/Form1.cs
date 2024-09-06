@@ -20,11 +20,15 @@ namespace WinFormApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
+            foreach (Form form in this.MdiChildren)
+            {
+                form.Close(); 
+            }
 
         }
         private void btnArticulo_Click(object sender, EventArgs e)
@@ -40,15 +44,11 @@ namespace WinFormApp
             formArticuloOpciones.MdiParent = this;
             formArticuloOpciones.Show();
 
-            
-            
         }
-
         private void navTitulo_MouseDown(object sender, MouseEventArgs e)
         {
 
         }
-
         private void navTitulo_Paint(object sender, PaintEventArgs e)
         {
 
