@@ -29,7 +29,9 @@ namespace WinFormApp
 
         private void btnArticulo_Click(object sender, EventArgs e)
         {
-           
+            FormArticuloOpciones formArticuloOpciones = new FormArticuloOpciones();
+            formArticuloOpciones.ShowDialog();
+            
         }
 
         private void navTitulo_MouseDown(object sender, MouseEventArgs e)
