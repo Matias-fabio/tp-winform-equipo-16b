@@ -304,6 +304,7 @@
             this.Controls.Add(this.MenuLateral);
             this.Controls.Add(this.navTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

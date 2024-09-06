@@ -38,11 +38,13 @@
             // 
             // panelOpcionesArticulos
             // 
+            this.panelOpcionesArticulos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelOpcionesArticulos.Controls.Add(this.button6);
             this.panelOpcionesArticulos.Controls.Add(this.button5);
             this.panelOpcionesArticulos.Controls.Add(this.button2);
             this.panelOpcionesArticulos.Controls.Add(this.button1);
             this.panelOpcionesArticulos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelOpcionesArticulos.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.panelOpcionesArticulos.Location = new System.Drawing.Point(0, 0);
             this.panelOpcionesArticulos.Name = "panelOpcionesArticulos";
             this.panelOpcionesArticulos.Size = new System.Drawing.Size(200, 450);
@@ -50,7 +52,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
@@ -68,7 +70,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -86,7 +88,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -102,7 +104,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
             this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -134,11 +136,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelOpcionesArticulos;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Panel panelOpcionesArticulos;
     }
 }

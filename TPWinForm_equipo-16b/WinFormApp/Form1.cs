@@ -30,7 +30,8 @@ namespace WinFormApp
         private void btnArticulo_Click(object sender, EventArgs e)
         {
             FormArticuloOpciones formArticuloOpciones = new FormArticuloOpciones();
-            formArticuloOpciones.ShowDialog();
+            formArticuloOpciones.MdiParent = this;
+            formArticuloOpciones.Show();
             
         }
 
