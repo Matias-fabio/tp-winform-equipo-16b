@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.MenuLateral = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnConfig = new FontAwesome.Sharp.IconButton();
             this.btnCategorias = new FontAwesome.Sharp.IconButton();
             this.btnMarcas = new FontAwesome.Sharp.IconButton();
             this.btnArticulo = new FontAwesome.Sharp.IconButton();
             this.btnInicio = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.navTitulo = new System.Windows.Forms.Panel();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.btnMin = new FontAwesome.Sharp.IconButton();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.MenuLateral.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -64,6 +64,13 @@
             this.MenuLateral.Name = "MenuLateral";
             this.MenuLateral.Size = new System.Drawing.Size(229, 597);
             this.MenuLateral.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(228, 127);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 467);
+            this.panel3.TabIndex = 2;
             // 
             // btnConfig
             // 
@@ -133,6 +140,7 @@
             this.btnMarcas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMarcas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMarcas.UseVisualStyleBackColor = true;
+            this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
             // 
             // btnArticulo
             // 
@@ -180,7 +188,7 @@
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // panel1
             // 
@@ -192,6 +200,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(229, 127);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(228, 127);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(207, 100);
+            this.panel2.TabIndex = 2;
             // 
             // label1
             // 
@@ -281,20 +296,6 @@
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(228, 127);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(207, 100);
-            this.panel2.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(228, 127);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 467);
-            this.panel3.TabIndex = 2;
             // 
             // Form1
             // 

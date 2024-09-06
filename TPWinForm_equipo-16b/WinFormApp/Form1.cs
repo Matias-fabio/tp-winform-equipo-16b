@@ -12,6 +12,7 @@ namespace WinFormApp
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
@@ -22,16 +23,24 @@ namespace WinFormApp
 
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void btnInicio_Click(object sender, EventArgs e)
         {
 
         }
-
         private void btnArticulo_Click(object sender, EventArgs e)
         {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(FormArticuloOpciones))
+                    return;
+
+            }
+
             FormArticuloOpciones formArticuloOpciones = new FormArticuloOpciones();
             formArticuloOpciones.MdiParent = this;
             formArticuloOpciones.Show();
+
+            
             
         }
 
@@ -70,5 +79,12 @@ namespace WinFormApp
         {
 
         }
+
+        private void btnMarcas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
