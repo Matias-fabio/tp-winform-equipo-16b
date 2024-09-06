@@ -42,6 +42,9 @@ namespace WinFormApp
 
             FormArticuloOpciones formArticuloOpciones = new FormArticuloOpciones();
             formArticuloOpciones.MdiParent = this;
+            formArticuloOpciones.StartPosition = FormStartPosition.Manual;
+            formArticuloOpciones.Location = new Point(
+                0, 0);
             formArticuloOpciones.Show();
 
         }
