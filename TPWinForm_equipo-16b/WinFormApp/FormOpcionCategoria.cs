@@ -21,5 +21,10 @@ namespace WinFormApp
         {
 
         }
+
+        private void FormOpcionCategoria_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

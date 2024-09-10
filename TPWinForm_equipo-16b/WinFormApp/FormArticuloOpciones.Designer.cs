@@ -126,9 +126,9 @@
             this.ClientSize = new System.Drawing.Size(1047, 593);
             this.Controls.Add(this.panelOpcionesArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.IsMdiContainer = true;
             this.Name = "FormArticuloOpciones";
             this.Text = "FormArticuloOpciones";
+            this.Load += new System.EventHandler(this.FormArticuloOpciones_Load);
             this.panelOpcionesArticulos.ResumeLayout(false);
             this.ResumeLayout(false);
 

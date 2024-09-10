@@ -34,7 +34,15 @@ namespace WinFormApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            FormAgregarArticulo formAgregarArticulo = new FormAgregarArticulo();
+            formAgregarArticulo.StartPosition = FormStartPosition.Manual;
+            formAgregarArticulo.Location = new Point(0, 0);
+            formAgregarArticulo.ShowDialog();
+        }
+
+        private void FormArticuloOpciones_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

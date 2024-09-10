@@ -54,6 +54,7 @@
             this.PanelAgregarArticulo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelAgregarArticulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelAgregarArticulo.Controls.Add(this.pictureBox1);
             this.PanelAgregarArticulo.Controls.Add(this.label7);
             this.PanelAgregarArticulo.Controls.Add(this.button1);
@@ -74,7 +75,7 @@
             this.PanelAgregarArticulo.ForeColor = System.Drawing.SystemColors.Control;
             this.PanelAgregarArticulo.Location = new System.Drawing.Point(218, 12);
             this.PanelAgregarArticulo.Name = "PanelAgregarArticulo";
-            this.PanelAgregarArticulo.Size = new System.Drawing.Size(575, 569);
+            this.PanelAgregarArticulo.Size = new System.Drawing.Size(613, 571);
             this.PanelAgregarArticulo.TabIndex = 0;
             this.PanelAgregarArticulo.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelAgregarArticulo_Paint);
             // 
@@ -97,7 +98,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NombreArticulo.Location = new System.Drawing.Point(299, 25);
             this.NombreArticulo.Name = "NombreArticulo";
-            this.NombreArticulo.Size = new System.Drawing.Size(124, 20);
+            this.NombreArticulo.Size = new System.Drawing.Size(158, 20);
             this.NombreArticulo.TabIndex = 1;
             // 
             // label1
@@ -119,7 +120,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CodigoArticulo.Location = new System.Drawing.Point(299, 63);
             this.CodigoArticulo.Name = "CodigoArticulo";
-            this.CodigoArticulo.Size = new System.Drawing.Size(124, 20);
+            this.CodigoArticulo.Size = new System.Drawing.Size(158, 20);
             this.CodigoArticulo.TabIndex = 3;
             // 
             // label2
@@ -155,7 +156,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(299, 106);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(155, 21);
             this.comboBox1.TabIndex = 6;
             // 
             // comboBox2
@@ -166,7 +167,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(299, 136);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.Size = new System.Drawing.Size(155, 21);
             this.comboBox2.TabIndex = 7;
             // 
             // label4
@@ -200,7 +201,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Location = new System.Drawing.Point(263, 182);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(209, 67);
+            this.richTextBox1.Size = new System.Drawing.Size(243, 65);
             this.richTextBox1.TabIndex = 10;
             this.richTextBox1.Text = "";
             // 
@@ -223,7 +224,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(299, 273);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
+            this.textBox1.Size = new System.Drawing.Size(153, 20);
             this.textBox1.TabIndex = 12;
             // 
             // button1
@@ -234,7 +235,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(50)))));
             this.button1.Location = new System.Drawing.Point(85, 466);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(387, 82);
+            this.button1.Size = new System.Drawing.Size(421, 80);
             this.button1.TabIndex = 13;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = false;
@@ -258,7 +259,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Location = new System.Drawing.Point(263, 328);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 90);
+            this.pictureBox1.Size = new System.Drawing.Size(203, 88);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
@@ -267,11 +268,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(1047, 593);
+            this.ClientSize = new System.Drawing.Size(1085, 595);
             this.Controls.Add(this.PanelAgregarArticulo);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormAgregarArticulo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAgregarArticulo";
             this.PanelAgregarArticulo.ResumeLayout(false);
             this.PanelAgregarArticulo.PerformLayout();
