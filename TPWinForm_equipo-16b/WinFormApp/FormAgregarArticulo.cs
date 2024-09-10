@@ -10,31 +10,31 @@ using System.Windows.Forms;
 
 namespace WinFormApp
 {
-    public partial class FormArticuloOpciones : Form
+    public partial class FormAgregarArticulo : Form
     {
-        public FormArticuloOpciones()
+        public FormAgregarArticulo()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void PanelAgregarArticulo_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void panelOpcionesArticulos_Paint(object sender, PaintEventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

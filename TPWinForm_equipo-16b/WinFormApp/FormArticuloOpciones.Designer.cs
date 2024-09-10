@@ -66,6 +66,7 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "Agregar Articulo";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
@@ -125,6 +126,7 @@
             this.ClientSize = new System.Drawing.Size(1047, 593);
             this.Controls.Add(this.panelOpcionesArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "FormArticuloOpciones";
             this.Text = "FormArticuloOpciones";
             this.panelOpcionesArticulos.ResumeLayout(false);
