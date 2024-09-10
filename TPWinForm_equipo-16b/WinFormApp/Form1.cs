@@ -43,8 +43,7 @@ namespace WinFormApp
             FormArticuloOpciones formArticuloOpciones = new FormArticuloOpciones();
             formArticuloOpciones.MdiParent = this;
             formArticuloOpciones.StartPosition = FormStartPosition.Manual;
-            formArticuloOpciones.Location = new Point(
-                0, 0);
+            formArticuloOpciones.Location = new Point(0, 0);
             formArticuloOpciones.Show();
 
         }
@@ -95,11 +94,24 @@ namespace WinFormApp
             FormMarcasOpciones formMarcasOpciones = new FormMarcasOpciones();
             formMarcasOpciones.MdiParent = this;
             formMarcasOpciones.StartPosition = FormStartPosition.Manual;
-            formMarcasOpciones.Location = new Point(
-                0, 0);
+            formMarcasOpciones.Location = new Point(0, 0);
             formMarcasOpciones.Show();
         }
 
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(FormOpcionCategoria))
+                    return;
 
+            }
+
+            FormOpcionCategoria formCategoriaOpciones = new FormOpcionCategoria();
+            formCategoriaOpciones.MdiParent = this;
+            formCategoriaOpciones.StartPosition = FormStartPosition.Manual;
+            formCategoriaOpciones.Location = new Point(0, 0);
+            formCategoriaOpciones.Show();
+        }
     }
 }
