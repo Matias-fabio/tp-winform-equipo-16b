@@ -67,6 +67,12 @@
     <Compile Include="FormArticuloOpciones.Designer.cs">
       <DependentUpon>FormArticuloOpciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMarcasOpciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMarcasOpciones.Designer.cs">
+      <DependentUpon>FormMarcasOpciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Marca.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormArticuloOpciones.resx">
       <DependentUpon>FormArticuloOpciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMarcasOpciones.resx">
+      <DependentUpon>FormMarcasOpciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

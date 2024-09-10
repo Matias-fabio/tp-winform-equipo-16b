@@ -85,7 +85,19 @@ namespace WinFormApp
 
         private void btnMarcas_Click(object sender, EventArgs e)
         {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(FormMarcasOpciones))
+                    return;
 
+            }
+
+            FormMarcasOpciones formMarcasOpciones = new FormMarcasOpciones();
+            formMarcasOpciones.MdiParent = this;
+            formMarcasOpciones.StartPosition = FormStartPosition.Manual;
+            formMarcasOpciones.Location = new Point(
+                0, 0);
+            formMarcasOpciones.Show();
         }
 
 
