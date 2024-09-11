@@ -19,7 +19,10 @@ namespace WinFormApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+           
+            ComercioArticulo comercio = new ComercioArticulo();
+            dgvArticulo.DataSource = comercio.articuloListar();
+          
         }
 
         private void button6_Click(object sender, EventArgs e)
