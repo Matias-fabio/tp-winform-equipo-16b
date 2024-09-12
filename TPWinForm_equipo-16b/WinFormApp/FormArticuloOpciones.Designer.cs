@@ -38,8 +38,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvArticulo = new System.Windows.Forms.DataGridView();
+            this.pboxArticulo = new System.Windows.Forms.PictureBox();
             this.panelOpcionesArticulos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelOpcionesArticulos
@@ -142,7 +144,7 @@
             this.dgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvArticulo.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dgvArticulo.Location = new System.Drawing.Point(224, 57);
+            this.dgvArticulo.Location = new System.Drawing.Point(164, 85);
             this.dgvArticulo.Name = "dgvArticulo";
             this.dgvArticulo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -155,8 +157,18 @@
             this.dgvArticulo.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
             this.dgvArticulo.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvArticulo.Size = new System.Drawing.Size(762, 462);
+            this.dgvArticulo.Size = new System.Drawing.Size(590, 385);
             this.dgvArticulo.TabIndex = 1;
+            this.dgvArticulo.SelectionChanged += new System.EventHandler(this.dgvArticulo_SelectionChanged);
+            // 
+            // pboxArticulo
+            // 
+            this.pboxArticulo.Location = new System.Drawing.Point(760, 144);
+            this.pboxArticulo.Name = "pboxArticulo";
+            this.pboxArticulo.Size = new System.Drawing.Size(275, 263);
+            this.pboxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxArticulo.TabIndex = 2;
+            this.pboxArticulo.TabStop = false;
             // 
             // FormArticuloOpciones
             // 
@@ -164,6 +176,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(1047, 593);
+            this.Controls.Add(this.pboxArticulo);
             this.Controls.Add(this.dgvArticulo);
             this.Controls.Add(this.panelOpcionesArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -172,6 +185,7 @@
             this.Load += new System.EventHandler(this.FormArticuloOpciones_Load);
             this.panelOpcionesArticulos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxArticulo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,5 +197,6 @@
         public System.Windows.Forms.Panel panelOpcionesArticulos;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dgvArticulo;
+        private System.Windows.Forms.PictureBox pboxArticulo;
     }
 }

@@ -14,7 +14,7 @@ namespace WinFormApp
         //public Marca Marca { get; set; }
         //public Categoria Categoria { get; set; }
 
-        //public List<Imagen> Imagenes { get; set; }
+        public string ImagenUrl { get; set; }
         public decimal Precio { get; set; }
 
     }
