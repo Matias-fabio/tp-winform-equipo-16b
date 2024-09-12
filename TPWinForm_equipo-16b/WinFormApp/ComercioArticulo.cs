@@ -15,8 +15,8 @@ namespace WinFormApp
             SqlCommand comando = new SqlCommand();
             SqlDataReader lector;
 
-            //try
-            //{
+            try
+            {
                 conexion.ConnectionString = "server = .\\SQLEXPRESS; database = CATALOGO_P3_DB; integrated security= true";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "SELECT a.Codigo, a.Nombre, a.Descripcion, a.Precio, i.ImagenUrl AS imagen FROM ARTICULOS a LEFT JOIN IMAGENES i ON a.Id = i.IdArticulo;";
@@ -37,14 +37,13 @@ namespace WinFormApp
                 }
                 conexion.Close();
                 return listaArticulos;
+            }
+            catch (Exception ex)
+            {
 
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    throw ex;
+                throw ex;
             
-            //}
+            }
     
         }
     }
