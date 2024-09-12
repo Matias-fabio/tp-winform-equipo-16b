@@ -86,7 +86,6 @@
     <Compile Include="FormOpcionCategoria.Designer.cs">
       <DependentUpon>FormOpcionCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Imagen.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -143,6 +143,7 @@
             this.dgvArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvArticulo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulo.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvArticulo.Location = new System.Drawing.Point(164, 85);
             this.dgvArticulo.Name = "dgvArticulo";
@@ -157,6 +158,7 @@
             this.dgvArticulo.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
             this.dgvArticulo.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvArticulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulo.Size = new System.Drawing.Size(590, 385);
             this.dgvArticulo.TabIndex = 1;
             this.dgvArticulo.SelectionChanged += new System.EventHandler(this.dgvArticulo_SelectionChanged);
