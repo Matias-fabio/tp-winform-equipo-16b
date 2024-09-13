@@ -275,7 +275,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormAgregarArticulo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "FormAgregarArticulo";
             this.PanelAgregarArticulo.ResumeLayout(false);
             this.PanelAgregarArticulo.PerformLayout();
