@@ -30,30 +30,28 @@
         {
             this.MenuLateral = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.navTitulo = new System.Windows.Forms.Panel();
-            this.btnConfig = new FontAwesome.Sharp.IconButton();
             this.btnCategorias = new FontAwesome.Sharp.IconButton();
             this.btnMarcas = new FontAwesome.Sharp.IconButton();
             this.btnArticulo = new FontAwesome.Sharp.IconButton();
             this.btnInicio = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.navTitulo = new System.Windows.Forms.Panel();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.btnMin = new FontAwesome.Sharp.IconButton();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.MenuLateral.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.navTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.navTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuLateral
             // 
             this.MenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
             this.MenuLateral.Controls.Add(this.panel3);
-            this.MenuLateral.Controls.Add(this.btnConfig);
             this.MenuLateral.Controls.Add(this.btnCategorias);
             this.MenuLateral.Controls.Add(this.btnMarcas);
             this.MenuLateral.Controls.Add(this.btnArticulo);
@@ -71,74 +69,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 467);
             this.panel3.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.iconPictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 127);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(228, 127);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(207, 100);
-            this.panel2.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
-            this.label1.Location = new System.Drawing.Point(71, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 31);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ItemTrack";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // navTitulo
-            // 
-            this.navTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
-            this.navTitulo.Controls.Add(this.btnMaximizar);
-            this.navTitulo.Controls.Add(this.btnMin);
-            this.navTitulo.Controls.Add(this.btnCerrar);
-            this.navTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.navTitulo.Location = new System.Drawing.Point(0, 0);
-            this.navTitulo.Name = "navTitulo";
-            this.navTitulo.Size = new System.Drawing.Size(1280, 53);
-            this.navTitulo.TabIndex = 0;
-            this.navTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.navTitulo_Paint);
-            // 
-            // btnConfig
-            // 
-            this.btnConfig.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfig.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConfig.FlatAppearance.BorderSize = 0;
-            this.btnConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
-            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfig.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnConfig.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.btnConfig.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnConfig.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConfig.IconSize = 40;
-            this.btnConfig.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfig.Location = new System.Drawing.Point(0, 367);
-            this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnConfig.Size = new System.Drawing.Size(229, 60);
-            this.btnConfig.TabIndex = 5;
-            this.btnConfig.Text = "Configuracion";
-            this.btnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfig.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnConfig.UseVisualStyleBackColor = true;
             // 
             // btnCategorias
             // 
@@ -236,6 +166,38 @@
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.iconPictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(229, 127);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(228, 127);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(207, 100);
+            this.panel2.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
+            this.label1.Location = new System.Drawing.Point(71, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 31);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "ItemTrack";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
@@ -249,6 +211,19 @@
             this.iconPictureBox1.Size = new System.Drawing.Size(197, 58);
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
+            // 
+            // navTitulo
+            // 
+            this.navTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
+            this.navTitulo.Controls.Add(this.btnMaximizar);
+            this.navTitulo.Controls.Add(this.btnMin);
+            this.navTitulo.Controls.Add(this.btnCerrar);
+            this.navTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navTitulo.Location = new System.Drawing.Point(0, 0);
+            this.navTitulo.Name = "navTitulo";
+            this.navTitulo.Size = new System.Drawing.Size(1280, 53);
+            this.navTitulo.TabIndex = 0;
+            this.navTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.navTitulo_Paint);
             // 
             // btnMaximizar
             // 
@@ -315,8 +290,8 @@
             this.MenuLateral.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.navTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.navTitulo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -325,7 +300,6 @@
         private System.Windows.Forms.Panel MenuLateral;
         private FontAwesome.Sharp.IconButton btnInicio;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton btnConfig;
         private FontAwesome.Sharp.IconButton btnCategorias;
         private FontAwesome.Sharp.IconButton btnMarcas;
         private FontAwesome.Sharp.IconButton btnArticulo;
