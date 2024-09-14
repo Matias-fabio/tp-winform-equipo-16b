@@ -17,8 +17,8 @@ namespace WinFormApp
 
             try
             {
-                ///onexion.ConnectionString = "server = .\\SQLEXPRESS; database = CATALOGO_P3_DB; integrated security= true;";
-                conexion.ConnectionString = "server = localhost; database = CATALOGO_P3_DB; User Id=SA;Password=Panqueque16;";
+                conexion.ConnectionString = "server = .\\SQLEXPRESS; database = CATALOGO_P3_DB; integrated security= true;";
+                //conexion.ConnectionString = "server = localhost; database = CATALOGO_P3_DB; User Id=SA;Password=Panqueque16;";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "SELECT a.Codigo, a.Nombre, a.Descripcion, a.Precio, i.ImagenUrl AS imagen FROM ARTICULOS a LEFT JOIN IMAGENES i ON a.Id = i.IdArticulo;";
                 comando.Connection = conexion;

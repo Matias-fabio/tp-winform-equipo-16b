@@ -36,5 +36,20 @@ namespace WinFormApp
         {
 
         }
+
+        private void FormAgregarArticulo_Load(object sender, EventArgs e)
+        {
+            this.Location = new Point(0, 0);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

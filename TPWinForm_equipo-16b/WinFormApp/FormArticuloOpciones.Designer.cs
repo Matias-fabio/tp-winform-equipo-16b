@@ -183,6 +183,7 @@
             this.Controls.Add(this.panelOpcionesArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormArticuloOpciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormArticuloOpciones";
             this.Load += new System.EventHandler(this.FormArticuloOpciones_Load);
             this.panelOpcionesArticulos.ResumeLayout(false);
