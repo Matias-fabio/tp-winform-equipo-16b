@@ -58,7 +58,12 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("Insert into POKEMONS"  ); /// Falta la query
+                datos.setearConsulta("Insert into ARTICULOS(Codigo, Nombre, Descripcion, Precio)values(@Codigo, @Nombre, @Descripcion, @Precio)"); /// Falta la query
+                datos.setearParametro("@Codigo", nArt.Codigo);
+                datos.setearParametro("@Nombre", nArt.Nombre);
+                datos.setearParametro("@Descripcion", nArt.Descripcion);
+                datos.setearParametro("@Precio", nArt.Precio);
+
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
