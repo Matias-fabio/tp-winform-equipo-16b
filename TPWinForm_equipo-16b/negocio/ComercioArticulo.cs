@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using dominio;
+using datos;
 namespace negocio
 {
     public class ComercioArticulo
@@ -49,6 +50,26 @@ namespace negocio
             
             }
     
+        }
+
+        public void agregar(Articulo nArt)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("Insert into POKEMONS"  ); /// Falta la query
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+
+            }
         }
     }
 }
