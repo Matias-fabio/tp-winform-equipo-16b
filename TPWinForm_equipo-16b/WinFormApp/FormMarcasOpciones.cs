@@ -31,5 +31,10 @@ namespace WinFormApp
         {
 
         }
+
+        private void FormMarcasOpciones_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
