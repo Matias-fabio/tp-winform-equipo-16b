@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormApp", "WinFormApp\Wi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F90ABBF2-D2EE-42D5-9D40-E45B7C0EF60A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dominio", "dominio\dominio.csproj", "{6315DCF3-87B7-43E7-A07D-34572C3FC20B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negocio", "negocio\negocio.csproj", "{E17900CC-1A24-45BD-9926-D751A464E34F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +21,14 @@ Global
 		{26EFFED8-BF69-4B41-83C3-22DB1997C8B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26EFFED8-BF69-4B41-83C3-22DB1997C8B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26EFFED8-BF69-4B41-83C3-22DB1997C8B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6315DCF3-87B7-43E7-A07D-34572C3FC20B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6315DCF3-87B7-43E7-A07D-34572C3FC20B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6315DCF3-87B7-43E7-A07D-34572C3FC20B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6315DCF3-87B7-43E7-A07D-34572C3FC20B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E17900CC-1A24-45BD-9926-D751A464E34F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E17900CC-1A24-45BD-9926-D751A464E34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E17900CC-1A24-45BD-9926-D751A464E34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E17900CC-1A24-45BD-9926-D751A464E34F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

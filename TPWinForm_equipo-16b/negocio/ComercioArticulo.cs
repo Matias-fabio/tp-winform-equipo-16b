@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-namespace WinFormApp
+using dominio;
+namespace negocio
 {
-    internal class ComercioArticulo
+    public class ComercioArticulo
     {
         public List<Articulo> articuloListar()
         {
