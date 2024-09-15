@@ -42,6 +42,7 @@ namespace WinFormApp
             agregarArticulo.StartPosition = FormStartPosition.Manual;
             agregarArticulo.Location = new Point(0, 0);
             agregarArticulo.ShowDialog();
+            cargar();
         }
 
         private void btnModificarArt_Click(object sender, EventArgs e)
@@ -53,6 +54,7 @@ namespace WinFormApp
             modificarArt.StartPosition = FormStartPosition.Manual;
             modificarArt.Location = new Point(0, 0);
             modificarArt.ShowDialog();
+            cargar();
 
         }
 
@@ -65,6 +67,7 @@ namespace WinFormApp
         {
             Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
             cargarImgen(seleccionado.ImagenUrl);
+            //TODO: revisar validacion
 
         }
         private void cargarImgen(string imagen)
@@ -103,13 +106,18 @@ namespace WinFormApp
             Articulo seleccionado;
             try
             {
-                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-                comercio.eliminar(seleccionado.Id);
-                cargar();
+                DialogResult resp = MessageBox.Show("¿Eliminar este artículo?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resp == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                    comercio.eliminar(seleccionado.Id);
+                    MessageBox.Show("Elimiado con exito");
+                    cargar();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("No se puede Eliminar el articulo seleccionado, intente mas tarde", "Error Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //throw ex;
             }
         }
