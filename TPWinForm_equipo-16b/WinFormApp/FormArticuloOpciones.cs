@@ -26,6 +26,7 @@ namespace WinFormApp
             listaArticulos = comercio.articuloListar();
             dgvArticulo.DataSource = listaArticulos;
             dgvArticulo.Columns["ImagenUrl"].Visible = false;
+            dgvArticulo.Columns["Id"].Visible = false;
             cargarImgen(listaArticulos[0].ImagenUrl);
 
         }
@@ -40,17 +41,29 @@ namespace WinFormApp
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnAgregarArt_Click(object sender, EventArgs e)
         {
-            FormAgregarArticulo formAgregarArticulo = new FormAgregarArticulo();
-            formAgregarArticulo.StartPosition = FormStartPosition.Manual;
-            formAgregarArticulo.Location = new Point(0, 0);
-            formAgregarArticulo.ShowDialog();
+            FormAgregarArticulo agregarArticulo = new FormAgregarArticulo();
+            agregarArticulo.StartPosition = FormStartPosition.Manual;
+            agregarArticulo.Location = new Point(0, 0);
+            agregarArticulo.ShowDialog();
+        }
+
+        private void btnModificarArt_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+
+            FormAgregarArticulo modificarArt = new FormAgregarArticulo(seleccionado);
+            modificarArt.StartPosition = FormStartPosition.Manual;
+            modificarArt.Location = new Point(0, 0);
+            modificarArt.ShowDialog();
+
         }
 
         private void FormArticuloOpciones_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void dgvArticulo_SelectionChanged(object sender, EventArgs e)
@@ -71,5 +84,12 @@ namespace WinFormApp
                 pboxArticulo.Load("https://yaktribe.games/community/media/placeholder-jpg.84782/full");
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

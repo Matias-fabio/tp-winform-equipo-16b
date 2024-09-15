@@ -22,7 +22,7 @@ namespace negocio
                 conexion.ConnectionString = "server = .\\SQLEXPRESS; database = CATALOGO_P3_DB; integrated security= true;";
                 //conexion.ConnectionString = "server = localhost; database = CATALOGO_P3_DB; User Id=SA;Password=Panqueque16;";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT a.Codigo, a.Nombre, a.Descripcion, a.Precio, i.ImagenUrl AS imagen FROM ARTICULOS a LEFT JOIN IMAGENES i ON a.Id = i.IdArticulo;";
+                comando.CommandText = "SELECT a.Codigo, a.Nombre, a.Descripcion, a.Precio, i.ImagenUrl AS imagen, a.Id FROM ARTICULOS a LEFT JOIN IMAGENES i ON a.Id = i.IdArticulo;";
                 comando.Connection = conexion;
                 
                 conexion.Open();
@@ -31,6 +31,7 @@ namespace negocio
                 while(lector.Read())
                 {
                     Articulo aux = new Articulo();
+                    aux.Id = (int)lector["Id"];
                     aux.Codigo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
@@ -58,7 +59,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("Insert into ARTICULOS(Codigo, Nombre, Descripcion, Precio)values(@Codigo, @Nombre, @Descripcion, @Precio)"); /// Falta la query
+                datos.setearConsulta("Insert into ARTICULOS(Codigo, Nombre, Descripcion, Precio)values(@Codigo, @Nombre, @Descripcion, @Precio)");
                 datos.setearParametro("@Codigo", nArt.Codigo);
                 datos.setearParametro("@Nombre", nArt.Nombre);
                 datos.setearParametro("@Descripcion", nArt.Descripcion);
@@ -74,6 +75,31 @@ namespace negocio
             {
                 datos.cerrarConexion();
 
+            }
+        }
+
+        public void modificar(Articulo art)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, Precio = @precio Where Id = @id");
+                datos.setearParametro("@codigo", art.Codigo);
+                datos.setearParametro("@nombre", art.Nombre);
+                datos.setearParametro("@descripcion", art.Descripcion);
+                datos.setearParametro("@precio", art.Precio);
+                datos.setearParametro("@id", art.Id);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
     }
