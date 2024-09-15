@@ -199,5 +199,85 @@ namespace negocio
                 Registro.cerrarConexion();
             }
         }
+
+        ///FUNCIONES DE MARCAS
+        public List<Marca> MarcasListar()
+        {
+            List<Marca> listaMarca = new List<Marca> ();
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+            try
+            {
+                //conexion.ConnectionString = "server = .\\SQLEXPRESS; database = CATALOGO_P3_DB; integrated security= true;";
+                conexion.ConnectionString = "server = localhost; database = CATALOGO_P3_DB; User Id=SA;Password=Panqueque16;";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT Descripcion, Id FROM MARCAS";
+                comando.Connection = conexion;
+
+                conexion.Open();
+                lector = comando.ExecuteReader();
+
+                while (lector.Read())
+                {
+                    Marca aux = new Marca();
+                    aux.Id = (int)lector["Id"];
+                    aux.Nombre = (string)lector["Descripcion"];
+                    listaMarca.Add(aux);
+                }
+                conexion.Close();
+
+                return listaMarca;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+
+            }
+
+        }
+
+        public void AgregarMarca(Marca Mar)
+        {
+            AccesoDatos Registro = new AccesoDatos();
+            try
+            {
+                Registro.setearConsulta("INSERT into MARCAS(Descripcion)values(@Descripcion);");
+                Registro.setearParametro("@Descripcion", Mar.Nombre);
+
+                Registro.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Registro.cerrarConexion();
+            }
+        }
+
+        public void Modificarmarca(Marca Mar)
+        {
+            AccesoDatos Registro = new AccesoDatos();
+            try
+            {
+                Registro.setearConsulta("update MARCAS set Descripcion = @Descripcion Where Id = @id");
+                Registro.setearParametro("@Descripcion", Mar.Nombre);
+                Registro.setearParametro("@Id", Mar.Id);
+                Registro.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Registro.cerrarConexion();
+            }
+        }
     }
 }

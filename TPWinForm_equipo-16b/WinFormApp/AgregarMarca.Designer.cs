@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textCodigo = new System.Windows.Forms.TextBox();
+            this.TextAgregarMarca = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textCodigo
+            // TextAgregarMarca
             // 
-            this.textCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TextAgregarMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textCodigo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textCodigo.Location = new System.Drawing.Point(29, 131);
-            this.textCodigo.Name = "textCodigo";
-            this.textCodigo.Size = new System.Drawing.Size(255, 13);
-            this.textCodigo.TabIndex = 44;
+            this.TextAgregarMarca.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TextAgregarMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextAgregarMarca.Location = new System.Drawing.Point(29, 131);
+            this.TextAgregarMarca.Name = "TextAgregarMarca";
+            this.TextAgregarMarca.Size = new System.Drawing.Size(255, 13);
+            this.TextAgregarMarca.TabIndex = 44;
             // 
             // label1
             // 
@@ -92,6 +92,7 @@
             this.btnAceptar.TabIndex = 41;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -118,7 +119,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(318, 353);
-            this.Controls.Add(this.textCodigo);
+            this.Controls.Add(this.TextAgregarMarca);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnAceptar);
@@ -136,7 +137,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textCodigo;
+        private System.Windows.Forms.TextBox TextAgregarMarca;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnAceptar;
