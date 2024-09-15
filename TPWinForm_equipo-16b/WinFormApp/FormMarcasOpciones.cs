@@ -39,7 +39,20 @@ namespace WinFormApp
 
         private void ButtonAgregarMarcas_Click(object sender, EventArgs e)
         {
-            
+            AgregarMarca agregarMarca = new AgregarMarca();
+            agregarMarca.ShowDialog();
+        }
+
+        private void buttonEliminarMarca_Click(object sender, EventArgs e)
+        {
+            EliminarMarca eliminarMarca = new EliminarMarca();
+            eliminarMarca.ShowDialog();
+        }
+
+        private void buttonModificarMarcas_Click(object sender, EventArgs e)
+        {
+            ModificarMarca modificarMarca = new ModificarMarca();   
+            modificarMarca.ShowDialog();
         }
     }
 }

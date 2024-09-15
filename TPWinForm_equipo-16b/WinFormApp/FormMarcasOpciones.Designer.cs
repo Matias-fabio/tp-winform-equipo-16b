@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelOpcionesMarca = new System.Windows.Forms.Panel();
             this.ButtonAgregarMarcas = new System.Windows.Forms.Button();
             this.buttonEliminarMarca = new System.Windows.Forms.Button();
             this.buttonModificarMarcas = new System.Windows.Forms.Button();
-            this.buttonMostrarMarcas = new System.Windows.Forms.Button();
             this.pboxMarca = new System.Windows.Forms.PictureBox();
             this.dgvMarca = new System.Windows.Forms.DataGridView();
             this.comboBoxBuscarMarca = new System.Windows.Forms.ComboBox();
@@ -52,7 +51,6 @@
             this.panelOpcionesMarca.Controls.Add(this.ButtonAgregarMarcas);
             this.panelOpcionesMarca.Controls.Add(this.buttonEliminarMarca);
             this.panelOpcionesMarca.Controls.Add(this.buttonModificarMarcas);
-            this.panelOpcionesMarca.Controls.Add(this.buttonMostrarMarcas);
             this.panelOpcionesMarca.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelOpcionesMarca.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.panelOpcionesMarca.Location = new System.Drawing.Point(0, 0);
@@ -68,7 +66,7 @@
             this.ButtonAgregarMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonAgregarMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonAgregarMarcas.ForeColor = System.Drawing.SystemColors.Menu;
-            this.ButtonAgregarMarcas.Location = new System.Drawing.Point(-14, 85);
+            this.ButtonAgregarMarcas.Location = new System.Drawing.Point(-10, 175);
             this.ButtonAgregarMarcas.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonAgregarMarcas.Name = "ButtonAgregarMarcas";
             this.ButtonAgregarMarcas.Size = new System.Drawing.Size(173, 88);
@@ -92,6 +90,7 @@
             this.buttonEliminarMarca.TabIndex = 5;
             this.buttonEliminarMarca.Text = "Eliminar Marca";
             this.buttonEliminarMarca.UseVisualStyleBackColor = false;
+            this.buttonEliminarMarca.Click += new System.EventHandler(this.buttonEliminarMarca_Click);
             // 
             // buttonModificarMarcas
             // 
@@ -109,22 +108,7 @@
             this.buttonModificarMarcas.TabIndex = 2;
             this.buttonModificarMarcas.Text = "Modificar Marca";
             this.buttonModificarMarcas.UseVisualStyleBackColor = false;
-            // 
-            // buttonMostrarMarcas
-            // 
-            this.buttonMostrarMarcas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
-            this.buttonMostrarMarcas.FlatAppearance.BorderSize = 0;
-            this.buttonMostrarMarcas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
-            this.buttonMostrarMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMostrarMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMostrarMarcas.ForeColor = System.Drawing.SystemColors.Menu;
-            this.buttonMostrarMarcas.Location = new System.Drawing.Point(-12, 177);
-            this.buttonMostrarMarcas.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonMostrarMarcas.Name = "buttonMostrarMarcas";
-            this.buttonMostrarMarcas.Size = new System.Drawing.Size(173, 86);
-            this.buttonMostrarMarcas.TabIndex = 1;
-            this.buttonMostrarMarcas.Text = "Mostrar Productos Marcas";
-            this.buttonMostrarMarcas.UseVisualStyleBackColor = false;
+            this.buttonModificarMarcas.Click += new System.EventHandler(this.buttonModificarMarcas_Click);
             // 
             // pboxMarca
             // 
@@ -137,19 +121,19 @@
             // 
             // dgvMarca
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvMarca.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvMarca.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvMarca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMarca.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvMarca.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMarca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMarca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvMarca.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -157,16 +141,16 @@
             this.dgvMarca.Location = new System.Drawing.Point(166, 97);
             this.dgvMarca.Name = "dgvMarca";
             this.dgvMarca.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMarca.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
-            this.dgvMarca.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMarca.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
+            this.dgvMarca.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvMarca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMarca.Size = new System.Drawing.Size(590, 385);
             this.dgvMarca.TabIndex = 50;
@@ -229,7 +213,6 @@
         private System.Windows.Forms.Button ButtonAgregarMarcas;
         private System.Windows.Forms.Button buttonEliminarMarca;
         private System.Windows.Forms.Button buttonModificarMarcas;
-        private System.Windows.Forms.Button buttonMostrarMarcas;
         private System.Windows.Forms.PictureBox pboxMarca;
         private System.Windows.Forms.DataGridView dgvMarca;
         private System.Windows.Forms.ComboBox comboBoxBuscarMarca;
