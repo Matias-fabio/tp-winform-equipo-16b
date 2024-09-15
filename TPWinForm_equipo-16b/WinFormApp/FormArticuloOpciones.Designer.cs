@@ -39,9 +39,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dgvArticulo = new System.Windows.Forms.DataGridView();
             this.pboxArticulo = new System.Windows.Forms.PictureBox();
+            this.iconSearch = new FontAwesome.Sharp.IconPictureBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panelOpcionesArticulos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxArticulo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // panelOpcionesArticulos
@@ -174,12 +177,40 @@
             this.pboxArticulo.TabIndex = 2;
             this.pboxArticulo.TabStop = false;
             // 
+            // iconSearch
+            // 
+            this.iconSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
+            this.iconSearch.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconSearch.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconSearch.IconSize = 21;
+            this.iconSearch.Location = new System.Drawing.Point(183, 46);
+            this.iconSearch.Name = "iconSearch";
+            this.iconSearch.Size = new System.Drawing.Size(21, 21);
+            this.iconSearch.TabIndex = 3;
+            this.iconSearch.TabStop = false;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscar.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBuscar.Location = new System.Drawing.Point(205, 47);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(289, 20);
+            this.txtBuscar.TabIndex = 4;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
             // FormArticuloOpciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(1047, 593);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.iconSearch);
             this.Controls.Add(this.pboxArticulo);
             this.Controls.Add(this.dgvArticulo);
             this.Controls.Add(this.panelOpcionesArticulos);
@@ -191,7 +222,9 @@
             this.panelOpcionesArticulos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxArticulo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSearch)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -203,5 +236,7 @@
         private System.Windows.Forms.Button btnAgregarArt;
         private System.Windows.Forms.DataGridView dgvArticulo;
         private System.Windows.Forms.PictureBox pboxArticulo;
+        private FontAwesome.Sharp.IconPictureBox iconSearch;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }

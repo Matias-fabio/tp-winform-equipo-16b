@@ -48,13 +48,21 @@ namespace WinFormApp
         private void btnModificarArt_Click(object sender, EventArgs e)
         {
             Articulo seleccionado;
-            seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+            if(dgvArticulo.CurrentRow != null)
+            {
+                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                FormAgregarArticulo modificarArt = new FormAgregarArticulo(seleccionado);
+                modificarArt.StartPosition = FormStartPosition.Manual;
+                modificarArt.Location = new Point(0, 0);
+                modificarArt.ShowDialog();
+                cargar();
 
-            FormAgregarArticulo modificarArt = new FormAgregarArticulo(seleccionado);
-            modificarArt.StartPosition = FormStartPosition.Manual;
-            modificarArt.Location = new Point(0, 0);
-            modificarArt.ShowDialog();
-            cargar();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un articulo a modificar, intente nuevamente");
+            }
+
 
         }
 
@@ -65,9 +73,22 @@ namespace WinFormApp
 
         private void dgvArticulo_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-            cargarImgen(seleccionado.ImagenUrl);
-            //TODO: revisar validacion
+            try
+            {
+                if (dgvArticulo.CurrentRow != null)
+                {
+                    Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                    cargarImgen(seleccionado.ImagenUrl);
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+           
+            
 
         }
         private void cargarImgen(string imagen)
@@ -120,6 +141,26 @@ namespace WinFormApp
                 MessageBox.Show("No se puede Eliminar el articulo seleccionado, intente mas tarde", "Error Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //throw ex;
             }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+            string filtro = txtBuscar.Text;
+
+            if (filtro.Length >= 3)
+            {
+                listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()));
+            }
+            else
+            {
+                listaFiltrada = listaArticulos;
+            }
+
+            dgvArticulo.DataSource = null;
+            dgvArticulo.DataSource = listaFiltrada;
+            dgvArticulo.Columns["ImagenUrl"].Visible = false;
+            dgvArticulo.Columns["Id"].Visible = false;
         }
     }
 }
