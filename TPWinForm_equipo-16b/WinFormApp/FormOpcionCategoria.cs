@@ -29,8 +29,21 @@ namespace WinFormApp
 
         private void ButtonAgregarCategoria_Click(object sender, EventArgs e)
         {
-            AgregarArticulo Ventana = new AgregarArticulo();
+            AgregarCategoria Ventana = new AgregarCategoria();
             Ventana.ShowDialog();
+        }
+
+        private void buttonEliminarCategoria_Click(object sender, EventArgs e)
+        {
+            EliminarCategoria Ventana = new EliminarCategoria();
+            Ventana.ShowDialog();
+
+        }
+
+        private void buttonModificarCategoria_Click(object sender, EventArgs e)
+        {
+            ModificarCategoria modificarCategoria = new ModificarCategoria();
+            modificarCategoria.ShowDialog();
         }
     }
 }
