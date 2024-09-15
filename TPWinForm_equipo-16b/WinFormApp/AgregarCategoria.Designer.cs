@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnAceptarCategoria = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textCodigo = new System.Windows.Forms.TextBox();
+            this.textNuevaCategoria = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -54,24 +54,24 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnAceptar
+            // btnAceptarCategoria
             // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnAceptarCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(50)))));
-            this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAceptar.Location = new System.Drawing.Point(192, 298);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(115, 43);
-            this.btnAceptar.TabIndex = 35;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(50)))));
+            this.btnAceptarCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAceptarCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
+            this.btnAceptarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptarCategoria.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAceptarCategoria.Location = new System.Drawing.Point(192, 298);
+            this.btnAceptarCategoria.Name = "btnAceptarCategoria";
+            this.btnAceptarCategoria.Size = new System.Drawing.Size(115, 43);
+            this.btnAceptarCategoria.TabIndex = 35;
+            this.btnAceptarCategoria.Text = "Aceptar";
+            this.btnAceptarCategoria.UseVisualStyleBackColor = false;
+            this.btnAceptarCategoria.Click += new System.EventHandler(this.btnAceptarCategoria_Click);
             // 
             // lblTitulo
             // 
@@ -102,18 +102,18 @@
             this.label1.Text = "Nueva Categoria :";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textCodigo
+            // textNuevaCategoria
             // 
-            this.textCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.textNuevaCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textCodigo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textCodigo.Location = new System.Drawing.Point(52, 187);
-            this.textCodigo.Name = "textCodigo";
-            this.textCodigo.Size = new System.Drawing.Size(255, 13);
-            this.textCodigo.TabIndex = 39;
-            this.textCodigo.TextChanged += new System.EventHandler(this.textCodigo_TextChanged);
+            this.textNuevaCategoria.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textNuevaCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textNuevaCategoria.Location = new System.Drawing.Point(52, 187);
+            this.textNuevaCategoria.Name = "textNuevaCategoria";
+            this.textNuevaCategoria.Size = new System.Drawing.Size(255, 13);
+            this.textNuevaCategoria.TabIndex = 39;
+            this.textNuevaCategoria.TextChanged += new System.EventHandler(this.textCodigo_TextChanged);
             // 
             // AgregarCategoria
             // 
@@ -121,10 +121,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(350, 446);
-            this.Controls.Add(this.textCodigo);
+            this.Controls.Add(this.textNuevaCategoria);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.btnAceptarCategoria);
             this.Controls.Add(this.btnCancelar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -133,6 +133,7 @@
             this.Name = "AgregarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarArticulo";
+            this.Load += new System.EventHandler(this.AgregarCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,9 +142,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnAceptarCategoria;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textCodigo;
+        private System.Windows.Forms.TextBox textNuevaCategoria;
     }
 }

@@ -119,5 +119,29 @@ namespace negocio
                 throw ex;
             }
         }
+
+
+        //FUNCIONES DE CATEGORIA 
+
+        public void AgregarCategoria(Categoria Cat)
+        {
+            AccesoDatos Registro = new AccesoDatos();
+            try
+            {
+                Registro.setearConsulta("INSERT into CATEGORIAS(Descripcion)values(@Descripcion);");
+                Registro.setearParametro("@Descripcion", Cat.Nombre);
+
+                Registro.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Registro.cerrarConexion();
+            }
+        }
     }
 }
