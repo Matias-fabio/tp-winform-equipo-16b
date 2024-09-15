@@ -21,13 +21,8 @@ namespace WinFormApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            ComercioArticulo comercio = new ComercioArticulo();
-            listaArticulos = comercio.articuloListar();
-            dgvArticulo.DataSource = listaArticulos;
-            dgvArticulo.Columns["ImagenUrl"].Visible = false;
-            dgvArticulo.Columns["Id"].Visible = false;
-            cargarImgen(listaArticulos[0].ImagenUrl);
+
+            cargar();
 
         }
 
@@ -85,11 +80,38 @@ namespace WinFormApp
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void cargar()
         {
-
+            ComercioArticulo comercio = new ComercioArticulo();
+            try
+            {
+                listaArticulos = comercio.articuloListar();
+                dgvArticulo.DataSource = listaArticulos;
+                dgvArticulo.Columns["ImagenUrl"].Visible = false;
+                dgvArticulo.Columns["Id"].Visible = false;
+                cargarImgen(listaArticulos[0].ImagenUrl);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
-
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ComercioArticulo comercio = new ComercioArticulo();
+            Articulo seleccionado;
+            try
+            {
+                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                comercio.eliminar(seleccionado.Id);
+                cargar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                //throw ex;
+            }
+        }
     }
 }
