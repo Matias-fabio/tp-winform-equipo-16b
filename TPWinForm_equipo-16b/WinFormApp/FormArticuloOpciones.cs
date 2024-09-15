@@ -162,5 +162,10 @@ namespace WinFormApp
             dgvArticulo.Columns["ImagenUrl"].Visible = false;
             dgvArticulo.Columns["Id"].Visible = false;
         }
+
+        private void pboxArticulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dominio;
+using FontAwesome.Sharp;
 using negocio;
 
 namespace WinFormApp
@@ -108,6 +109,42 @@ namespace WinFormApp
 
                 MessageBox.Show(ex.ToString());
 
+            }
+        }
+
+        private void btnImagen_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnImagen_MouseLeave(object sender, EventArgs e)
+        {
+
+
+            IconButton btn = (IconButton)sender;
+            btn.IconColor = Color.Gainsboro;
+        }
+
+        private void btnImagen_MouseHover(object sender, EventArgs e)
+        {
+            IconButton btn = (IconButton)sender;
+            btn.IconColor = Color.FromArgb(1, 176, 117);
+        }
+
+        private void txtImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtImagen.Text);
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pboxImagen.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                pboxImagen.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
             }
         }
     }
