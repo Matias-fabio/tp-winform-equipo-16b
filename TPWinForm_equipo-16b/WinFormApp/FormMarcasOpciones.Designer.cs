@@ -65,6 +65,7 @@
             this.ButtonAgregarMarcas.TabIndex = 6;
             this.ButtonAgregarMarcas.Text = "Agregar Marcas";
             this.ButtonAgregarMarcas.UseVisualStyleBackColor = false;
+            this.ButtonAgregarMarcas.Click += new System.EventHandler(this.ButtonAgregarMarcas_Click);
             // 
             // buttonEliminarMarca
             // 

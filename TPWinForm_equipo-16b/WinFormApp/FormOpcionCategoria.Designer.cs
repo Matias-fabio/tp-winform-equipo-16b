@@ -32,12 +32,14 @@
             this.buttonEliminarCategoria = new System.Windows.Forms.Button();
             this.buttonModificarCategoria = new System.Windows.Forms.Button();
             this.buttonMostrarPorCategoria = new System.Windows.Forms.Button();
+            this.ButtonAgregarCategoria = new System.Windows.Forms.Button();
             this.panelOpcionesCategoria.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelOpcionesCategoria
             // 
             this.panelOpcionesCategoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelOpcionesCategoria.Controls.Add(this.ButtonAgregarCategoria);
             this.panelOpcionesCategoria.Controls.Add(this.buttonEliminarCategoria);
             this.panelOpcionesCategoria.Controls.Add(this.buttonModificarCategoria);
             this.panelOpcionesCategoria.Controls.Add(this.buttonMostrarPorCategoria);
@@ -97,6 +99,23 @@
             this.buttonMostrarPorCategoria.Text = "Mostrar Productos Por Categoria";
             this.buttonMostrarPorCategoria.UseVisualStyleBackColor = false;
             // 
+            // ButtonAgregarCategoria
+            // 
+            this.ButtonAgregarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
+            this.ButtonAgregarCategoria.FlatAppearance.BorderSize = 0;
+            this.ButtonAgregarCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
+            this.ButtonAgregarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonAgregarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAgregarCategoria.ForeColor = System.Drawing.SystemColors.Menu;
+            this.ButtonAgregarCategoria.Location = new System.Drawing.Point(-12, 71);
+            this.ButtonAgregarCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.ButtonAgregarCategoria.Name = "ButtonAgregarCategoria";
+            this.ButtonAgregarCategoria.Size = new System.Drawing.Size(173, 86);
+            this.ButtonAgregarCategoria.TabIndex = 3;
+            this.ButtonAgregarCategoria.Text = "Agregar nueva categoria";
+            this.ButtonAgregarCategoria.UseVisualStyleBackColor = false;
+            this.ButtonAgregarCategoria.Click += new System.EventHandler(this.ButtonAgregarCategoria_Click);
+            // 
             // FormOpcionCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,5 +138,6 @@
         private System.Windows.Forms.Button buttonEliminarCategoria;
         private System.Windows.Forms.Button buttonModificarCategoria;
         private System.Windows.Forms.Button buttonMostrarPorCategoria;
+        private System.Windows.Forms.Button ButtonAgregarCategoria;
     }
 }

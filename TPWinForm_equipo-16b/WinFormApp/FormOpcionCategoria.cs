@@ -26,5 +26,11 @@ namespace WinFormApp
         {
 
         }
+
+        private void ButtonAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            AgregarArticulo Ventana = new AgregarArticulo();
+            Ventana.ShowDialog();
+        }
     }
 }
