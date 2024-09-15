@@ -34,7 +34,7 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnAceptarModMarca = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxModMarca
@@ -116,23 +116,24 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnAceptar
+            // btnAceptarModMarca
             // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnAceptarModMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(50)))));
-            this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAceptar.Location = new System.Drawing.Point(191, 300);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(115, 36);
-            this.btnAceptar.TabIndex = 49;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptarModMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(50)))));
+            this.btnAceptarModMarca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAceptarModMarca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(176)))), ((int)(((byte)(117)))));
+            this.btnAceptarModMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptarModMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptarModMarca.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAceptarModMarca.Location = new System.Drawing.Point(191, 300);
+            this.btnAceptarModMarca.Name = "btnAceptarModMarca";
+            this.btnAceptarModMarca.Size = new System.Drawing.Size(115, 36);
+            this.btnAceptarModMarca.TabIndex = 49;
+            this.btnAceptarModMarca.Text = "Aceptar";
+            this.btnAceptarModMarca.UseVisualStyleBackColor = false;
+            this.btnAceptarModMarca.Click += new System.EventHandler(this.btnAceptarModMarca_Click);
             // 
             // ModificarMarca
             // 
@@ -146,13 +147,14 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.btnAceptarModMarca);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ModificarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ModificarMarca";
+            this.Load += new System.EventHandler(this.ModificarMarca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +168,6 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnAceptarModMarca;
     }
 }
