@@ -122,7 +122,42 @@ namespace negocio
 
 
         //FUNCIONES DE CATEGORIA 
+        public List<Categoria> categoriaListar()
+        {
+            List<Categoria> listaCategoria = new List<Categoria>();
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+            try
+            {
+                //conexion.ConnectionString = "server = .\\SQLEXPRESS; database = CATALOGO_P3_DB; integrated security= true;";
+                conexion.ConnectionString = "server = localhost; database = CATALOGO_P3_DB; User Id=SA;Password=Panqueque16;";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT Descripcion, Id FROM CATEGORIAS";
+                comando.Connection = conexion;
 
+                conexion.Open();
+                lector = comando.ExecuteReader();
+
+                while (lector.Read())
+                {
+                    Categoria aux = new Categoria();
+                    aux.Id = (int)lector["Id"];
+                    aux.Nombre = (string)lector["Descripcion"];
+                    listaCategoria.Add(aux);
+                }
+                conexion.Close();
+
+                return listaCategoria;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+
+            }
+
+        }
         public void AgregarCategoria(Categoria Cat)
         {
             AccesoDatos Registro = new AccesoDatos();
@@ -131,6 +166,27 @@ namespace negocio
                 Registro.setearConsulta("INSERT into CATEGORIAS(Descripcion)values(@Descripcion);");
                 Registro.setearParametro("@Descripcion", Cat.Nombre);
 
+                Registro.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Registro.cerrarConexion();
+            }
+        }
+
+        public void ModificarCategoria(Categoria Cat)
+        {
+            AccesoDatos Registro = new AccesoDatos();
+            try
+            {
+                Registro.setearConsulta("update CATEGORIAS set Descripcion = @Descripcion Where Id = @id");
+                Registro.setearParametro("@Descripcion", Cat.Nombre);
+                Registro.setearParametro("@Id", Cat.Id);
                 Registro.ejecutarAccion();
             }
             catch (Exception ex)

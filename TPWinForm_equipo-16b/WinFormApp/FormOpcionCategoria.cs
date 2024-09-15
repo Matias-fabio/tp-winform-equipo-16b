@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,6 +43,8 @@ namespace WinFormApp
 
         private void buttonModificarCategoria_Click(object sender, EventArgs e)
         {
+            
+            
             ModificarCategoria modificarCategoria = new ModificarCategoria();
             modificarCategoria.ShowDialog();
         }
