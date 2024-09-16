@@ -26,7 +26,10 @@ namespace WinFormApp
 
         private void FormOpcionCategoria_Load(object sender, EventArgs e)
         {
+
+            
             ComercioArticulo comercioArticulo = new ComercioArticulo();
+            dgvCategoria.DataSource = comercioArticulo.categoriaListar();
             try
             {
                 comboBoxBuscarCategoria.DataSource = comercioArticulo.categoriaListar();

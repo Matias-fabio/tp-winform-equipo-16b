@@ -1,4 +1,5 @@
-﻿using System;
+﻿using negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +35,17 @@ namespace WinFormApp
 
         private void FormMarcasOpciones_Load(object sender, EventArgs e)
         {
+            ComercioArticulo comercioArticulo = new ComercioArticulo();
+            dgvMarca.DataSource = comercioArticulo.MarcasListar();
+            try
+            {
+                comboBoxBuscarMarca.DataSource = comercioArticulo.MarcasListar();
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void ButtonAgregarMarcas_Click(object sender, EventArgs e)
