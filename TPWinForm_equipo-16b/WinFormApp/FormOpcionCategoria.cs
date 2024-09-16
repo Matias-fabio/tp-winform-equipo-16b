@@ -1,4 +1,5 @@
 ﻿using dominio;
+using negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +26,16 @@ namespace WinFormApp
 
         private void FormOpcionCategoria_Load(object sender, EventArgs e)
         {
+            ComercioArticulo comercioArticulo = new ComercioArticulo();
+            try
+            {
+                comboBoxBuscarCategoria.DataSource = comercioArticulo.categoriaListar();
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void ButtonAgregarCategoria_Click(object sender, EventArgs e)
