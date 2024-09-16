@@ -91,6 +91,7 @@
             this.btnAceptar.TabIndex = 47;
             this.btnAceptar.Text = "Eliminar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -128,6 +129,7 @@
             this.Name = "EliminarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EliminarMarca";
+            this.Load += new System.EventHandler(this.EliminarMarca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -279,5 +279,25 @@ namespace negocio
                 Registro.cerrarConexion();
             }
         }
+        public void EliminarMarca(Marca Mar)
+        {
+            AccesoDatos Registro = new AccesoDatos();
+            
+            try
+            {
+                Registro.setearConsulta("DELETE FROM MARCAS where Id = @Id");
+                Registro.setearParametro("@Id", Mar.Id);
+                Registro.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Registro.cerrarConexion();
+            }
+        }
     }
 }
