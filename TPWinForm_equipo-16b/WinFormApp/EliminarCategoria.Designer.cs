@@ -66,6 +66,7 @@
             this.btnAceptar.TabIndex = 41;
             this.btnAceptar.Text = "Eliminar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -130,6 +131,7 @@
             this.Name = "EliminarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EliminarCategoria";
+            this.Load += new System.EventHandler(this.EliminarCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

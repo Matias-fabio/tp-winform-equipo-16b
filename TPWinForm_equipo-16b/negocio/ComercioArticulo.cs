@@ -200,6 +200,27 @@ namespace negocio
             }
         }
 
+        public void EliminarCategoria(Categoria Cat)
+        {
+            AccesoDatos Registro = new AccesoDatos();
+            try
+            {
+                Registro.setearConsulta("DELETE FROM CATEGORIAS where Id = @Id");
+                Registro.setearParametro("@Id", Cat.Id);
+                Registro.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Registro.cerrarConexion();
+            }
+        }
+
         ///FUNCIONES DE MARCAS
         public List<Marca> MarcasListar()
         {
